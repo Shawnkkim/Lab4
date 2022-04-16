@@ -1,67 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Outfit:wght@500&display=swap');
 
-        body,html{
-            margin:auto; padding:auto;
-            background-color: #724bbf;
-            background-image: url("bckground_img/bck_images1.jpg"); 
-            position: relative;
-            text-align: center;
-            padding-bottom: 10px;
-        }
-
-        hr {
-            color: white;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #status {
-            color: rgb(160, 0, 0);
-        }
-
-        #map{
-            position: relative;
-            width: 90vw; height: 90vh;
-            margin-left: auto; margin-right: auto;
-            border-radius: 7.5px;
-        }
-
-        #main-header {
-            margin: 0; font-family: 'Comfortaa', cursive; font-weight: normal; text-align: center;
-            background-color: rgba(51, 9, 102, 0.5); background-image: url("bckground_img/bck_images.jpg"); background-blend-mode: multiply; background-size: cover;
-            padding-top: 10px; padding-bottom: 1px; width: 100%; color: white; border-radius: 7.5px;
-        }
-
-        #form-bkg {
-            background-color: #6941d7;
-            position: relative;
-            width: 30vw;
-            margin-left: auto; margin-right: auto;
-            border-radius: 7.5px;
-            margin-bottom: 5px;
-        }
-
-        #form-input {
-            background-color: #FFFFFF;
-            border: 2px solid rgba(71, 14, 89, 0.4);
-            border-radius: 4px;
-            padding: 7px 15px;
-            height: auto;
-            text-align: center;
-            margin-bottom: 5px; margin-top: 5px; margin-right: 20px; margin-left: 10px;
-            vertical-align: -2px;
-        }
-    </style>
  
     <head>
-        <meta charset="UTF-8">
+       
         <title>Beom Sae Shawn's Website</title>
-
-
-        
+        <Link rel="StyleSheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">
@@ -104,7 +47,7 @@
             
             <form id="sub">
                 <label for="tname">Subscription Topic:</label>
-                <input type="text" id="tname" name="tname" value="ENGO551/BeomSaeShawn_Kim/my_temperature" style="border-radius: 4px; margin-left: 18px; width:350px"><br><br>
+                <input type="text" id="tname" name="tname" value="ENGO551/BeomSaeShawn_Kim/my_temperature" style="border-radius: 5px; margin-left: 18px; width:350px"><br><br>
                 <input type="button" class="btn btn-secondary" value="Subscribe" onclick="subscribeTopic()"><br><br>
             </form>
 
@@ -114,11 +57,11 @@
 
             <form id="msg">
                 <label for="mtname">Publish Topic:</label>
-                <input type="text" id="mtname" name="mtname" style="border-radius: 4px; margin-left: 18px; width:300px"><br><br>
+                <input type="text" id="mtname" name="mtname" style="border-radius: 5px; margin-left: 15px; width:300px"><br><br>
                 <label for="msgtext">Message:</label>
-                <input type="text" id="msgtext" name="msgtext" style="border-radius: 4px; margin-left: 48px; width:300px"><br><br>
+                <input type="text" id="msgtext" name="msgtext" style="border-radius: 5px; margin-left: 45px; width:300px"><br><br>
                 <input type="button" class="btn btn-success" value="Submit" onclick="sendMessage()">
-                <!-- <input type="button" class="btn btn-secondary" value="Send location" style="margin-left: 20px;" onclick="shareStatus()"><br><br> -->
+
             </form>
 
             <p id="msgstatus"></p>
@@ -136,9 +79,9 @@
             
             <form id="stat">
                 <label for="coursename">Course Name:</label>
-                <input type="text" id="crsname" name="crsname" value="ENGO551" style="border-radius: 4px; margin-left: 18px; width:200px"><br><br>
+                <input type="text" id="crsname" name="crsname" value="ENGO551" style="border-radius: 5px; margin-left: 15px; width:200px"><br><br>
                 <label for="yourname">Your Name:</label>
-                <input type="text" id="yrname" name="yrname" value="BeomSaeShawn_Kim" style="border-radius: 4px; margin-left: 35px; width:200px"><br><br>
+                <input type="text" id="yrname" name="yrname" value="BeomSaeShawn_Kim" style="border-radius: 5px; margin-left: 33px; width:200px"><br><br>
             
                 <input type="button" class="btn btn-secondary" value="Get location" style="margin-left: 20px;" onclick="shareStatus()"><br><br>
             </form>
